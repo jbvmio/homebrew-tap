@@ -6,6 +6,12 @@ class Kafkactl < Formula
   version "1.0.21"
   sha256 "59edf7d44672c1a3d48047a0d2437c9102345239d8851ca9ba76b457f27bacf0"
 
+  devel do
+    url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.21-beta.5439615/kafkactl_1.0.21-beta.5439615_Darwin_x86_64.tar.gz"
+    version "1.0.21-beta.5439615"
+    sha256 "3dbae871902dd48b3504c6b790a60d397ae0a3ddc3974e1b50bb9bdfb2c264e1"
+  end
+
   def install
     bin.install "kafkactl"
   end
