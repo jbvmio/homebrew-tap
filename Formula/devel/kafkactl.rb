@@ -2,14 +2,13 @@
 class Kafkactl < Formula
   desc "CLI for Apache Kafka and Zookeeper Management."
   homepage "http://www.jbvm.io/kafkactl"
-  url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.21-beta.5439615/kafkactl_1.0.21-beta.5439615_Darwin_x86_64.tar.gz"
-  version "1.0.21-beta.5439615"
-  sha256 "3dbae871902dd48b3504c6b790a60d397ae0a3ddc3974e1b50bb9bdfb2c264e1"
+  url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.21-beta.5579665/kafkactl_1.0.21-beta.5579665_Darwin_x86_64.tar.gz"
+  version "1.0.21-beta.5579665"
+  sha256 "70e3f63457eeace8374813ad27a485995430cecf656b45e2e1d25f99e6854b8d"
   
   devel do
-    url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.21-beta.5439615/kafkactl_1.0.21-beta.5439615_Darwin_x86_64.tar.gz"
-    version "1.0.21-beta.5439615"
-    sha256 "3dbae871902dd48b3504c6b790a60d397ae0a3ddc3974e1b50bb9bdfb2c264e1"
+    url "https://github.com/jbvmio/kafkactl/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    sha256 "sha256here"
   end
 
   def install
