@@ -24,6 +24,9 @@ if [ "$ARGUMENT" = "check" ]; then
         git remote set-url origin https://jbvmio:${GITHUB_TOKEN}@github.com/jbvmio/homebrew-tap.git
         git add .
         git commit -m "syncing devel formulas"
-        git push origin
+        git branch temp
+        git checkout master
+        git merge temp
+        git push origin master
     fi
 fi
