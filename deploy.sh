@@ -4,7 +4,7 @@ ARGUMENT=$1
 
 if [ "$ARGUMENT" = "vars" ]; then
     ls -lrth Formula/ | egrep -v 'drwx|total' > before.compare
-    ./updateBrew.darwin
+    ./updateBrew
     ls -lrth Formula/ | egrep -v 'drwx|total' > after.compare
     
     BEFORE=$(sha1sum before.compare | awk '{print $1}')
