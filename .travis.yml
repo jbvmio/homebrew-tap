@@ -3,7 +3,7 @@ before_install:
 - eval $(./deploy.sh vars)
 env:
   global:
-  - secure: "rhX4sCsYXAi4o/HfZ4b7v//aC0c/ShKXpxkJHuSrP8iZ/vjhtMW1jU9TBH8HNhqMmpw+kWiQRHRCCA2C9NPe2Mv1+j4Z44IJKU0Ux8OIqJYVqOcJcRXiKCghPxM9nfYm4iz4oTGFOXte9v6PXFpztpOp7D9ax5+PDSFoWBCPAaWQkKVMMVP4TlGAWdWE4i+KztxvSQSIshAfOm/2PT/jgUlFX9//rSldmT4Q6tUGR1ZXkiEIgz9ZkY2c1swi+OQSvbGojW4X7QlugPxAf5y/NGFwXRjgKFzTk5MWBxEJy8HCziD57OD/KyHoQjWSO1YZ5f9fiHmqgfHeBreQme/d8YrWRIMzytYlB+YuwVJgsJt+rGvgzruBpzSlxqsH/Ly0YXCGpL6WFC3j9ZOCTcPIFMJn9rDF//1pUoAlH2lYEf6CAiqRZrcq8zt1u0ggiS71sRDrB6SM2uml00t/afXs4wfY4gNuxrAXaBdxuno+0okbiuTyd0POBiRmZvMOnm4F8OxzrxcB8Z4xzK/wDqgftcjm2LTNcmI1zOZNmJQvgmmU7fbcfTLX9HX0nOXetyCndbUQcC5iIeVof66W5ctDJMvDSSEMhpuf1OKCouTdn/kjEJjyPYBjIrcyBOKuw2twjBgxXx8dR/7D8p66t+/CtevyWsz/RYGyK+4M9imoslo="
+  - secure: "MkhpuHqJwplF5zqj5voNMW6ZV7o57zY+FV53cp/XBCLclwYxb+RUjmY7VbIuxGy+CyscsqADZAkCCVR5v0FIjM7WbMht+n5CbBnfgkR2hg+wv1CJuPsfgeCrpgg3WLI5Xbmv6tWZRxRUXRsLFQ6OgvYgT5b5Z0VfnhNv3Sd0JXuVr9Gld+Y9EKOQsvubSDT5Zpf4grHyUz7KFhK2R2mvM/TATR4JOFd6byEix8C9Y4YW9udyiDAmXP69lCyX/hQtY/m9p4+McKEarLrbuK6TnRsGp85bnq+dGrElb84ekNLfDuiTfr+MLJ5EMo85PP1IZqpbthoyGPOSjFcZZyMwiZHdx1iF3TpMEv+HUSNF73MqPWi7EQPGsQ7sqmuw5UXsf8VYrBk3rooovOrwU9gSR7oKR+SwVPywFcVQ46qU2J4w3kWQvfxb/LnRZZZ3cWN+8gpN4oMgHtNLA7Kz1klbyDTukqc0I/Bv/DsWLgjk5SCAngq3id/a5AKDttRb8wCXDKYbMWI8LpzG9B5c2T18d4q+xnOcEL5oHQ0WtdA0YRJm4Y2bs+ugMglNYVCpc9knDrSRNa+kDrovABWnZGuOZ1R52sxxv7kjLDCNq5s0EpAYIhQpJ5UP9S+DJ1rK5kixkmigP5NRZjhLEyhHEkhs2zjSbeC88Y+Mn+RYWLcsirw="
 script: make verify
 after_success:
 - make check
@@ -12,5 +12,4 @@ deploy:
   skip_cleanup: true
   script: ./deploy.sh check
   on:
-    tags: true
     condition: $CHANGED = 1
