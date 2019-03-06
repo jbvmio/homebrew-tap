@@ -27,4 +27,4 @@ verify: update
 push: verify
 	git add .
 	git commit -m "syncing devel formulas"
-	git push origin
+	git push origin master
