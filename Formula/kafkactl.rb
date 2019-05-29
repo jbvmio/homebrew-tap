@@ -18,3 +18,4 @@ class Kafkactl < Formula
   test do
     system "#{bin}/kafkactl version"
   end
+end
