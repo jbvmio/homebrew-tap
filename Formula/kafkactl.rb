@@ -15,6 +15,8 @@ class Kafkactl < Formula
   def install
     bin.install "kafkactl"
   end
+
   test do
     system "#{bin}/kafkactl version"
   end
+end
