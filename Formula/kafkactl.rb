@@ -2,21 +2,15 @@
 class Kafkactl < Formula
   desc "CLI for Apache Kafka and Zookeeper Management."
   homepage "http://www.jbvm.io/kafkactl"
-  url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.22/kafkactl_1.0.22_Darwin_x86_64.tar.gz"
-  version "1.0.22"
-  sha256 "b30a82a5084119156d681d0433536c1166955faa27f0a0b94b621d187745c051"
-
-  devel do
-    url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.22-beta.12858318/kafkactl_1.0.22-beta.12858318_Darwin_x86_64.tar.gz"
-    version "1.0.22-beta.12858318"
-    sha256 "ef16cf3dee6afc23ebe5ac8505af3e1b08dcb1022c0808cdfbc3fa6d1f96ca1f"
-  end
+  url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.23/kafkactl_1.0.23_Darwin_x86_64.tar.gz"
+  version "1.0.23"
+  sha256 "e682935f95fbf5908f3a31d7b2008015d680a8a33195c8ae325a8bbfd08bea63"
 
   def install
     bin.install "kafkactl"
   end
+
   test do
     system "#{bin}/kafkactl version"
   end
 end
-
