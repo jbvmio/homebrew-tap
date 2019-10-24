@@ -4,22 +4,25 @@ class Kafkactl < Formula
   homepage "http://www.jbvm.io/kafkactl"
   version "1.0.25"
   bottle :unneeded
-
   if OS.mac?
     url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.25/kafkactl_1.0.25_Darwin_x86_64.tar.gz"
     sha256 "26d7bf9cd509ab21a6e3f2e621f57bb86f779311c51c44fb1f0dbabf1819c422"
+
+  devel do
+    url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.22-beta.12858318/kafkactl_1.0.22-beta.12858318_Darwin_x86_64.tar.gz"
+    version "1.0.22-beta.12858318"
+    sha256 "ef16cf3dee6afc23ebe5ac8505af3e1b08dcb1022c0808cdfbc3fa6d1f96ca1f"
+  end
+
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/jbvmio/kafkactl/releases/download/v1.0.25/kafkactl_1.0.25_Linux_x86_64.tar.gz"
       sha256 "3db51f3ff62886ad71dbe750e50b57964c12020bf83fc61d7f91a784a6813484"
     end
   end
-
   def install
     bin.install "kafkactl"
   end
-
   test do
     system "#{bin}/kafkactl version"
   end
-end
